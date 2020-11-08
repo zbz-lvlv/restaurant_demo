@@ -1,0 +1,43 @@
+<html>
+
+<head>
+	<style>
+		table, th, td {
+			border: 1px solid black;
+		}
+	</style>
+</head>
+
+<body style="padding: 16px;">
+	
+	<template id="food_item_template">
+		<tr id="food_item">
+			<td></td>
+			<td></td>
+			<td></td>
+			<td><input type="number" min="0" value="0" onchange="foodItemSelected(this)"></td>
+		</tr>
+	</template>
+
+	<p>请选择食物</p>
+
+	<table id="food_table">
+
+		<tr>
+			<th>名称</th>
+			<th>图片</th>
+			<th>价格</th>
+			<th>数量</th>
+		</tr>
+
+	</table>
+
+	<p>总价: <span id="total_price">0.00</span></p>
+	<button id="buy_button" onclick="buyClicked()">购买</button>
+
+	<script src="{{ url_for('static', filename='js/jquery-3.5.1.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/order.js') }}"></script>
+
+</body>
+
+</html>
